@@ -10,19 +10,21 @@ This Virtual Pet Shelter is full of cats, dogs, and of course robots of both
    - Must be fed 
    - Give them water
    - If not kept clean health will go south!
--Robots
+- Robots
    - Act just like organics
    - Be sure to change their oil regularly
--Dogs
+- Dogs
    - Must be walked
    - Each get their own cage
--Cats
+- Cats
   - All hang out by the communal litter box 
 
 ### Steps to follow
--[ ] Open Shop 
 
--[X] Let things run amok!
+- [ ] Open Shop 
+
+- [X] Let things run amok!
+
 ### It looks like things have already ran amok....
 
 ![Image of virtual and real dogs](http://youngjournalistacademy.com/wp-content/uploads/2016/06/p3.jpg)
