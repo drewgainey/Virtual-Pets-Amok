@@ -5,9 +5,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.junit.Test;
 
-public class OrgaincCatTest {
+public class OrganicCatTest {
 	
-	OrgaincCat underTest = new OrgaincCat("Bill");
+	OrganicCat underTest = new OrganicCat("Bill");
 
 	@Test
 	public void shouldHaveName() {
@@ -45,5 +45,11 @@ public class OrgaincCatTest {
 		underTest.giveWater();
 		int thirst = underTest.getThirst();
 		assertThat(thirst,is(50));
+	}
+	@Test
+	public void shouldDecreaseWasteBy50WhenUseLitterBox() {
+		underTest.useLitterBox();
+		int waste = underTest.getWaste();
+		assertThat(waste,is(50));
 	}
 }
