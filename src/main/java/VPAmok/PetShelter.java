@@ -65,9 +65,42 @@ public class PetShelter {
 		for (Pet allPets : getPets()) {
 			if (allPets instanceof OrganicCat) {
 				((OrganicCat) allPets).useLitterBox();
-				litterBox.useBox();
 			}
 		}
 	}
+
+	public void printPets() {
+		for (Pet allPets : getPets()) {
+			System.out.format("%10s %11s %10s %10s %10s %10s %10s %10s %10s",
+					allPets.getName(),allPets.getType(allPets),allPets.getHealth(),allPets.getHappiness(),
+			allPets.printOilLevel(allPets),allPets.printThirst(allPets),allPets.printHunger(allPets),allPets.printWaste(allPets),
+			allPets.printCageClean(allPets));
+			System.out.println();
+		}
+	}
+
+	public void tick() {
+		for(Pet allPets : getPets()) {
+			allPets.tick();
+		}
+		
+	}
+
+	public void cleanCages() {
+		for (Pet allPets : getPets()) {
+			if (allPets instanceof OrganicDog) {
+				((OrganicDog) allPets).cleanCage();
+			}
+		}
+	}
+
+	public void catsUseBox() {
+		for (Pet allPets : getPets()) {
+			if (allPets instanceof OrganicCat) {
+				((OrganicCat) allPets).useLitterBox();
+			}
+		}
+	}
+
 
 }

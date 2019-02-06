@@ -2,13 +2,16 @@ package VPAmok;
 
 public class LitterBox {
 
-	private int wasteLevel = 0;
+	private static int wasteLevel = 0;
 
-	public int getWaste() {
+	public static int getWaste() {
 		return wasteLevel;
 	}
-	public void useBox() {
+	public static void useBox() {
 		wasteLevel +=10;
+	}
+	public static void clean() {
+		wasteLevel = 0;
 	}
 
 }

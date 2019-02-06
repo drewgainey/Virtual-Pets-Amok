@@ -16,7 +16,13 @@ public class LitterBoxTest {
 	public void shouldBeAbleToIncreaseWasteLevelInLitterBox() {
 		shelter.addPet(cat);
 		shelter.useLitterBox(underTest);
-		int wasteLevel = underTest.getWaste();
+		int wasteLevel = LitterBox.getWaste();
 		assertThat(wasteLevel, is(10));
+	}
+	@Test 
+	public void literBoxWasteShouldBe0AfterCleaing() {
+		shelter.addPet(cat);
+		shelter.useLitterBox(underTest);
+		LitterBox.clean();
 	}
 }

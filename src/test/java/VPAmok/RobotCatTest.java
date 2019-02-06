@@ -8,6 +8,7 @@ import org.junit.Test;
 public class RobotCatTest {
 
 	RobotCat underTest = new RobotCat("Robot Bill");
+	OrganicCat cat = new OrganicCat("Cat"); 
 
 	@Test
 	public void shouldHaveName() {
@@ -42,5 +43,16 @@ public class RobotCatTest {
 		underTest.changeOil();
 		int oilLevel = underTest.getOilLevel();
 		assertThat(oilLevel,is(100));
+	}
+	@Test
+	public void shouldDecreaseHealthBy10WhenLitterBoxWasteIs50OrMore() {
+		cat.useLitterBox();
+		cat.useLitterBox();
+		cat.useLitterBox();
+		cat.useLitterBox();
+		cat.useLitterBox();
+		underTest.checkLitterBox();
+		int health = underTest.getHealth();
+		assertThat(health, is(90));
 	}
 }

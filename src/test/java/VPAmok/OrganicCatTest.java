@@ -52,4 +52,15 @@ public class OrganicCatTest {
 		int waste = underTest.getWaste();
 		assertThat(waste,is(50));
 	}
+	@Test
+	public void shouldDecreaseHealthBy10WhenLitterBoxWasteIs50OrMore() {
+		underTest.useLitterBox();
+		underTest.useLitterBox();
+		underTest.useLitterBox();
+		underTest.useLitterBox();
+		underTest.useLitterBox();
+		underTest.checkLitterBox();
+		int health = underTest.getHealth();
+		assertThat(health, is(90));
+	}
 }
